@@ -16,6 +16,15 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+    signingConfigs {
+        create("release") {
+            storeFile = file(System.getenv("UPLOAD_KEYSTORE_FILE") ?: "your_upload_keystore.jks")
+            storePassword = System.getenv("UPLOAD_KEYSTORE_PASSWORD")
+            keyAlias = System.getenv("UPLOAD_KEY_ALIAS")
+            keyPassword = System.getenv("UPLOAD_KEY_PASSWORD")
+        }
+    }
+
 
     buildTypes {
         release {
@@ -24,6 +33,8 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("release")
+
         }
     }
     compileOptions {
