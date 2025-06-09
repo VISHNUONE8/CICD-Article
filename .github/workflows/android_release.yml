@@ -48,7 +48,7 @@ jobs:
         uses: r0adkll/upload-google-play@v1.1.3 # Check for the latest version
         with:
           serviceAccountJsonPlainText: ${{ secrets.SERVICE_ACCOUNT_JSON_PLAIN_TEXT }}
-          packageName: com.example.cicdarticle # Replace with your app's package name
+          packageName: com.andrayudu.cicdarticle # Replace with your app's package name
           releaseFiles: app/build/outputs/bundle/release/*.aab # Path to your AAB
           track: internal # Or alpha, beta, production, internalappsharing
           status: draft # <<< --- CHANGE THIS TO 'draft'

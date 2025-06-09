@@ -1,4 +1,4 @@
-package com.example.cicdarticle
+package com.andrayudu.cicdarticle
 
 import org.junit.Test
 
