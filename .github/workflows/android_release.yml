@@ -3,7 +3,7 @@ name: Android CI/CD - Release to Play Store
 on:
   push:
     branches:
-      - main # Or your release branch, e.g., 'release/*'
+      - [ master ] # Or your release branch, e.g., 'release/*'
 
 jobs:
   build-and-release:
